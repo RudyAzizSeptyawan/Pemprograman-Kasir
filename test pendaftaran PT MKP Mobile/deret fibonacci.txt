@@ -1,0 +1,41 @@
+package main
+
+import "fmt"
+
+func main() {
+	// Rudy Aziz Septyawan - S1 Pendidikan Teknik informatika dan Komputer
+
+	// jadi akan membuat program deret fibonacci menggunakan golang
+
+	// logikanya adalah menjumlahkan angka sekarang dan angka sebelumnya,lalu hasilnya ditaruh setelah ke dua angka tersebut
+
+	// misalnya adlah nilai 1
+	// hasil : 1
+	// 0 + 1
+	// hasil : 1 1
+	// 1 + 1
+	// hasil selanjutnya : 1 1 2, dan seterusnya
+
+	var result []int
+
+	n := 1
+	n1 := 1
+	n2 := 0
+
+	point := 10
+
+	for i := 0; i < point; i++ {
+
+		// push ke dalam array hasilnya
+		result = append(result, n)
+
+		n = n1 + n2
+		n2 = n1 //n1 akan menjadi n2nya atau angka sebelumnya
+		n1 = n  // n  akan menjadi n1nya atau angka sekarang
+
+	}
+
+	// panggil array "result"
+	fmt.Println(result)
+
+}
